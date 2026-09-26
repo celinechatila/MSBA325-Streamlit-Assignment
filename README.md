@@ -1,4 +1,4 @@
-This Streamlit app explores healthcare resources across Lebanese districts
+This Streamlit app explores healthcare resources across Lebanese districts.
 
 ## Features
 - Select a district
