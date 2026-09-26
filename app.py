@@ -125,17 +125,15 @@ st.subheader("Design Justifications")
 
 with st.expander("Why use a district dropdown?"):
     st.write(
-        "The district dropdown helps the user explore healthcare resources within "
-        "one district in Lebanon at a time. A dropdown was chosen because there are many "
-        "districts, so showing all of them as buttons or checkboxes would create clutter. "
-        "This provides geographic context by allowing the user to focus on one district at a time."
+        "This feature helps the user explore healthcare resources within one specific district in Lebanon at a time. "
+        "The district dropdown was chosen instead of buttons and checkboxes because there are 25 districts represented in the dataset "
+        "and having them displayed on the screen all at once would create unnecessary clutter. "
+        "This widget provides the user with geographic context by showing the user which district he is exploring."
     )
 
-with st.expander("Why use a medical resource selector?"):
+with st.expander("Why use a medical resource radio buttons?"):
     st.write(
-        "The radio buttons help the user choose one of the five medical resource types "
-        "to examine within the selected district. They were chosen because there are only "
-        "five resource options, so keeping them visible makes selection quick and clear. "
-        "This helps focus the user's attention on one resource at a time and keeps the "
-        "comparison between towns clear."
+        "This feature helps the user choose which medical resource type he wants to examine within the selected district. "
+        "There are only five options of medical resources, so using radio buttons and making them visible all at once allows the user to quickly and easily switch between them. "
+        "This widget focuses the user's attention on one resource at a time and keeps the comparison between towns clear."
     )
