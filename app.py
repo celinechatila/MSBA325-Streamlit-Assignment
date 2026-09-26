@@ -5,7 +5,7 @@ import plotly.express as px
 df = pd.read_csv("Medical_Resources_Cleaned.csv")
 st.title("Healthcare Resources Across Lebanese Districts")
 
-st.write("Created by Celine Chatila")
+st.markdown("**Created by Celine Chatila**")
 
 st.write(
     "This app explores how selected healthcare resources are distributed across towns within Lebanese districts."
