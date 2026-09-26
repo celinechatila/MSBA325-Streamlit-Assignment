@@ -131,7 +131,7 @@ with st.expander("Why use a district dropdown?"):
         "This widget provides the user with geographic context by showing the user which district he is exploring."
     )
 
-with st.expander("Why use a medical resource radio buttons?"):
+with st.expander("Why use medical resource radio buttons?"):
     st.write(
         "This feature helps the user choose which medical resource type he wants to examine within the selected district. "
         "There are only five options of medical resources, so using radio buttons and making them visible all at once allows the user to quickly and easily switch between them. "
