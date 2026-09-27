@@ -56,12 +56,7 @@ resource_column = resource_columns[selected_resource]
 # Filter the data based on the selected district
 filtered_df = df[df["District"] == selected_district].copy()
 
-filtered_df[resource_column] = (
-    filtered_df[resource_column]
-    .fillna(0)
-    .astype(int)
-)
-
+filtered_df[resource_column] = filtered_df[resource_column].astype(int)
 
 
 # VISUALIZATION 1
@@ -93,7 +88,7 @@ st.plotly_chart(fig_bar, width="stretch")
 
 values = filtered_df[resource_column]
 
-all_values = df[resource_column].fillna(0).astype(int)
+all_values = df[resource_column].astype(int)
 
 max_value = int(all_values.max())
 
@@ -150,12 +145,17 @@ st.subheader("Key Insights")
 top_town = top_towns.iloc[0]["Town"]
 top_value = top_towns.iloc[0][resource_column]
 
-st.write(
-    f"**Insight 1:** {top_town} has the highest number of "
-    f"{selected_resource.lower()} in {selected_district}, "
-    f"with a total of {top_value}."
-)
-
+if top_value == 0:
+    st.write(
+        f"**Insight 1:** No town in {selected_district} has "
+        f"any recorded {selected_resource.lower()} in this dataset."
+    )
+else:
+    st.write(
+        f"**Insight 1:** {top_town} has the highest number of "
+        f"{selected_resource.lower()} in {selected_district}, "
+        f"with a total of {top_value}."
+    )
 
 zero_towns = (values == 0).sum()
 total_towns = len(values)
